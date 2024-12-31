@@ -2,9 +2,9 @@ import emailjs from "@emailjs/browser";
 import { Cart } from "../types/cart";
 import { formatOrderEmail } from "./formatOrder";
 
-const EMAIL_SERVICE_ID = process.env.VITE_EMAIL_SERVICE_ID as string;
-const EMAIL_TEMPLATE_ID = process.env.VITE_EMAIL_TEMPLATE_ID as string;
-const EMAIL_PUBLIC_KEY = process.env.VITE_EMAIL_PUBLIC_KEY;
+const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID as string;
+const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID as string;
+const EMAIL_PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 interface CustomerInfo {
   name: string;
   email: string;
